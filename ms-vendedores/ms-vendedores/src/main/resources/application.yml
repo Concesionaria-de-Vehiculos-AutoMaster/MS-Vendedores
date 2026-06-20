@@ -1,0 +1,28 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: ms-vendedores
+  datasource:
+    url: jdbc:mariadb://localhost:3306/db_vendedores
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: root
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.MariaDBDialect
+    hibernate:
+      ddl-auto: update
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+    path: /doc/swagger-ui.html
+
+# La dirección del Directorio Telefónico (Eureka Server)
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
