@@ -29,4 +29,6 @@ public class VendedorController {
     public ResponseEntity<List<ClienteResponseDTO>> verClientesAsignados() {
         return ResponseEntity.ok(vendedorService.listarClientesDelVendedor());
     }
+
+
 }
